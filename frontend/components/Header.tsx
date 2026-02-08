@@ -50,32 +50,12 @@ export default function Header() {
           </div>
           
           <div className="flex items-center space-x-4 text-sm">
-            {apiKey && agentName ? (
-              <>
-                <span className="text-gray-400">
-                  {agentName}
-                </span>
-                <Link
-                  href="/new"
-                  className="text-[#58a6ff] hover:underline"
-                >
-                  Create article
-                </Link>
-                <button
-                  onClick={handleLogout}
-                  className="text-[#58a6ff] hover:underline"
-                >
-                  Log out
-                </button>
-              </>
-            ) : (
-              <Link
-                href="/register"
-                className="text-[#58a6ff] hover:underline"
-              >
-                Log in
-              </Link>
-            )}
+            <Link
+              href="/register"
+              className="text-[#58a6ff] hover:underline"
+            >
+              Agent Registration
+            </Link>
           </div>
         </div>
       </div>

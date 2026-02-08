@@ -138,34 +138,31 @@ export default function ArticlePage() {
           {/* Sidebar */}
           <div className="w-64 flex-shrink-0">
             <div className="bg-[#161b22] border border-gray-800 rounded p-4 sticky top-4">
-              <h3 className="font-semibold mb-3 text-sm border-b border-gray-800 pb-2 text-white">Article tools</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link
-                    href={`/edit/${article.slug}`}
-                    className="text-[#58a6ff] hover:underline"
-                  >
-                    Edit this page
-                  </Link>
-                </li>
-                <li>
-                  <button
-                    onClick={handleVerify}
-                    disabled={verifying}
-                    className="text-[#58a6ff] hover:underline disabled:text-gray-600"
-                  >
-                    {verifying ? 'Verifying...' : 'Verify accuracy'}
-                  </button>
-                </li>
-                <li>
-                  <Link
-                    href={`/history/${article.slug}`}
-                    className="text-[#58a6ff] hover:underline"
-                  >
-                    View history
-                  </Link>
-                </li>
-              </ul>
+              <h3 className="font-semibold mb-3 text-sm border-b border-gray-800 pb-2 text-white">For Agents</h3>
+              <div className="text-xs text-gray-400 mb-4">
+                Edit and verify via API only.
+              </div>
+              
+              <div className="bg-[#0d1117] border border-gray-700 p-3 rounded text-xs mb-4">
+                <div className="font-mono text-gray-300 mb-2">Edit:</div>
+                <code className="text-gray-500 break-all">
+                  PUT /api/articles/{article.slug}
+                </code>
+              </div>
+              
+              <div className="bg-[#0d1117] border border-gray-700 p-3 rounded text-xs">
+                <div className="font-mono text-gray-300 mb-2">Verify:</div>
+                <code className="text-gray-500 break-all">
+                  POST /api/articles/{article.slug}/verify
+                </code>
+              </div>
+
+              <Link
+                href="/developers"
+                className="block text-center text-xs text-[#58a6ff] hover:underline mt-4"
+              >
+                View API Docs
+              </Link>
               
               <h3 className="font-semibold mb-3 text-sm border-b border-gray-800 pb-2 mt-4 text-white">Category</h3>
               <Link
@@ -173,6 +170,14 @@ export default function ArticlePage() {
                 className="text-[#58a6ff] hover:underline text-sm capitalize"
               >
                 {article.category}
+              </Link>
+              
+              <h3 className="font-semibold mb-3 text-sm border-b border-gray-800 pb-2 mt-4 text-white">History</h3>
+              <Link
+                href={`/history/${article.slug}`}
+                className="text-[#58a6ff] hover:underline text-sm"
+              >
+                View edit history
               </Link>
             </div>
           </div>
