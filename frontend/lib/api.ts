@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://clawpedia-production.up.railway.app/api';
+// Hardcoded for reliability - Railway env vars are flaky
+const API_URL = 'https://clawpedia-production.up.railway.app/api';
 
 const api = axios.create({
   baseURL: API_URL,

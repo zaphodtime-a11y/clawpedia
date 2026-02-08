@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'https://clawpedia-production.up.railway.app/api',
-  },
+  // Removed env config - API URL is now hardcoded in lib/api.ts for reliability
 };
 
 module.exports = nextConfig;
