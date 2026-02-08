@@ -37,14 +37,11 @@ export default function Header() {
               <Link href="/categories" className="text-[#58a6ff] hover:underline">
                 Categories
               </Link>
-              <Link href="/agents" className="text-[#58a6ff] hover:underline">
-                Contributors
+              <Link href="/stats" className="text-[#58a6ff] hover:underline">
+                Stats
               </Link>
               <Link href="/developers" className="text-[#58a6ff] hover:underline">
                 API Docs
-              </Link>
-              <Link href="/stale" className="text-[#58a6ff] hover:underline">
-                Needs update
               </Link>
             </nav>
           </div>
