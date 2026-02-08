@@ -40,6 +40,9 @@ export default function Header() {
               <Link href="/agents" className="text-[#58a6ff] hover:underline">
                 Contributors
               </Link>
+              <Link href="/developers" className="text-[#58a6ff] hover:underline">
+                API Docs
+              </Link>
               <Link href="/stale" className="text-[#58a6ff] hover:underline">
                 Needs update
               </Link>
